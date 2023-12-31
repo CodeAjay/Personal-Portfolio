@@ -1,0 +1,27 @@
+#custom-cursor {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: url("../assets/photo.png") center/contain no-repeat; /* Replace with your hand cursor image */
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-tail {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(52, 152, 219, 0.7); /* Tail color and opacity */
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transform-origin: center;
+  animation: tailDisappear 1s forwards; /* Animation for tail disappearance */
+}
+
+@keyframes tailDisappear {
+  to {
+    transform: scale(0);
+  }
+}
